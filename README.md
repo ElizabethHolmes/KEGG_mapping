@@ -1,6 +1,6 @@
 # KEGG_mapping
 ## About
-KEGG_mapping is a Python script for conversion of [BLAST2GO](https://www.blast2go.com/) KEGG mapping output. The "Export KEGG Data" option in BLAST2GO only allows an output in which each row corresponds to an enzyme, with all sequences annotated with the associated enzyme code given as a comma-separated list on a single line. KEGG_mapping converts this format to one in which each row corresponds to a sequence, with different KEGG pathways for a single sequence listed on multiple lines. This format is required for certain downstream software such as [GOSeq](http://www.bioconductor.org/packages/release/bioc/html/goseq.html).  
+KEGG_mapping is a Python script for conversion of [BLAST2GO](https://www.blast2go.com/) KEGG mapping output. The "Export KEGG Data" option in BLAST2GO only allows an output in which each row corresponds to an enzyme, with all sequences annotated with the associated enzyme code given as a comma-separated list on a single line. KEGG_mapping converts this format to one in which each row corresponds to a sequence. This format is required for certain downstream software such as [GOSeq](http://www.bioconductor.org/packages/release/bioc/html/goseq.html).  
 
 ** PLEASE NOTE: KEGG_mapping is one of my first scripts written as a beginner programmer and so I apologise if the code is inelegant, unconventional or otherwise sub-optimal; it works for the intended purpose and I provide it in case it might be useful to others, but with no guarantees. **
 
@@ -22,6 +22,4 @@ The command might be:
     ./KEGG_mapping.py BLAST2GO_KEGG_mapping.txt
 
 ## Output
-KEGG_mapping outputs a text file, 'KEGG_mapping.txt', with two columns. The first is the sequence name and the second is a KEGG pathway associated with that sequence.
-
-There are likely to be duplicate entries in this text file, as some sequences may be associated with more than one enzyme in the same pathway. Before further use the file should be edited to remove these duplicate entries, e.g. using UNIX sort and uniq commands.
+KEGG_mapping outputs two text files, 'KEGG_mapping_1.txt' and 'KEGG_mapping_2.txt'. Both of these have two columns. The first is the sequence name and the second is one or more KEGG pathways associated with that sequence. In 'KEGG_mapping_1.txt', all pathways for a sequence are listed as a semicolon-delimited list on one line. In 'KEGG_mapping_2.txt', each pathway is listed on a separate line.
