@@ -22,6 +22,6 @@ The command might be:
     ./KEGG_mapping.py BLAST2GO_KEGG_mapping.txt
 
 ## Output
-KEGG_mapping outputs a text file, 'output.txt', with two columns. The first is the sequence name and the second is a KEGG pathway associated with that sequence.
+KEGG_mapping outputs a text file, 'KEGG_mapping.txt', with two columns. The first is the sequence name and the second is a KEGG pathway associated with that sequence.
 
 There are likely to be duplicate entries in this text file, as some sequences may be associated with more than one enzyme in the same pathway. Before further use the file should be edited to remove these duplicate entries, e.g. using UNIX sort and uniq commands.
