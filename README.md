@@ -1,6 +1,6 @@
 # KEGG_mapping
 ## About
-KEGG_mapping is a Python script for conversion of [BLAST2GO](https://www.blast2go.com/) KEGG mapping output. The "Export KEGG Data" option in BLAST2GO only allows an output in which each row corresponds to an enzyme, with all sequences annotated with the associated enzyme code given as a comma-separated list on a single line. KEGG_mapping converts this format to one in which each row corresponds to a sequence. This format is required for certain downstream software such as [GOSeq](http://www.bioconductor.org/packages/release/bioc/html/goseq.html).  
+KEGG_mapping is a Python script for converting [BLAST2GO](https://www.blast2go.com/) KEGG mapping output. The "Export KEGG Data" option in BLAST2GO only allows an output in which each row corresponds to an enzyme, with all sequences annotated with the associated enzyme code given as a comma-separated list on a single line. KEGG_mapping converts this format to one in which each row corresponds to a sequence. This format is required for certain downstream software such as [GOSeq](http://www.bioconductor.org/packages/release/bioc/html/goseq.html).  
 
 ** PLEASE NOTE: KEGG_mapping is one of my first scripts written as a beginner programmer and so I apologise if the code is inelegant, unconventional or otherwise sub-optimal; it works for the intended purpose and I provide it in case it might be useful to others, but with no guarantees. **
 
